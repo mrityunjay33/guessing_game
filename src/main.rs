@@ -1,18 +1,24 @@
-// fn main() {
-//     let y = {
-//         let x = 3;
-//         x + 1
-//     };
-
-//     println!("The value of y is: ",y);
-// }
-
 fn main() {
-    let x = plus_one(5);
+    let number = 3;
 
-    println!("The value of x is: {x}");
-}
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
 
-fn plus_one(x: i32) -> i32 {
-    x + 1
+    // will give error - doesn't works like javascript
+    // if number {
+    //     println!("number was three");
+    // }
+
+    // Using if in a let Statement
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+    println!("The value of number is: {number}");
+    
+    // error (both the if arm and the else arm types are mismatched)
+    // let number = if condition { 5 } else { "six" }; 
+
+
 }
