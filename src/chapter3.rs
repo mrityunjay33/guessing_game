@@ -1,17 +1,9 @@
 fn main() {
-    // addition
-    let sum = 5 + 10;
+    println!("Hello, world!");
 
-    // subtraction
-    let difference = 95.5 - 4.3;
+    another_function();
+}
 
-    // multiplication
-    let product = 4 * 30;
-
-    // division
-    let quotient = 56.7 / 32.2;
-    let truncated = -5 / 3; // Results in -1
-
-    // remainder
-    let remainder = 43 % 5;
+fn another_function() {
+    println!("Another function.");
 }

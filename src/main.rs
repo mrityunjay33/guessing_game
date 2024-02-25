@@ -1,32 +1,7 @@
-// use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
-
 fn main() {
-    println!("Guess the number!");
+    print_labeled_measurement(5, 'h');
+}
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-
-    loop {
-        println!("Please input your guess.");
-        let mut guess = String::new();
-        std::io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
-        
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
-        println!("You guessed: {guess}");
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            },
-        }
-    }
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
 }
